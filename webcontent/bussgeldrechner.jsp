@@ -22,7 +22,7 @@
 </t:row>
 <t:rowdistance id="g_14" height="30" />
 <t:row id="g_17" >
-<t:fixgrid id="g_10" drawoddevenrows="false" height="100%" objectbinding="#{d.BussgeldRechnerBean.bussgeldKatalogGrid}" width="100%" >
+<t:fixgrid id="g_10" drawoddevenrows="false" focusable="false" height="100%" objectbinding="#{d.BussgeldRechnerBean.bussgeldKatalogGrid}" width="100%" >
 <t:gridcol id="g_12" avoidselection="true" text="Bezeichnung" width="50%" >
 <t:label id="g_42" text=".{description}" />
 </t:gridcol>
@@ -33,7 +33,7 @@
 <t:label id="g_44" text=".{jailTime}" />
 </t:gridcol>
 <t:gridcol id="g_16" text="Aktion" width="30" >
-<t:button id="g_70" actionListener=".{addButtonPressed}" enabled=".{actionEnabled}" text="+" />
+<t:button id="g_70" actionListener=".{addButtonPressed}" enabled=".{actionEnabled}" focusable="false" text="+" />
 </t:gridcol>
 </t:fixgrid>
 </t:row>
@@ -48,7 +48,7 @@
 </t:row>
 <t:rowdistance id="g_34" height="30" />
 <t:row id="g_28" >
-<t:fixgrid id="g_22" height="300" objectbinding="#{d.BussgeldRechnerBean.bussgeldAssignedGrid}" width="100%" >
+<t:fixgrid id="g_22" focusable="false" height="300" objectbinding="#{d.BussgeldRechnerBean.bussgeldAssignedGrid}" width="100%" >
 <t:gridcol id="g_30" text="Beschreibung" width="50%" >
 <t:label id="g_45" text=".{description}" />
 </t:gridcol>
@@ -59,7 +59,7 @@
 <t:label id="g_47" text=".{jailTime}" />
 </t:gridcol>
 <t:gridcol id="g_54" text="Aktion" width="30" >
-<t:button id="g_35" actionListener=".{removeButtonPressed}" text="X" />
+<t:button id="g_35" actionListener=".{removeButtonPressed}" focusable="false" text="X" />
 </t:gridcol>
 </t:fixgrid>
 </t:row>
