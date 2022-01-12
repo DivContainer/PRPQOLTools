@@ -132,7 +132,6 @@ public class EventController {
 		bussgelderFromCatalog.add(new BussgeldGridItem("Amtsanmaßung", 10000, 0, 6, null));
 		bussgelderFromCatalog.add(new BussgeldGridItem("Missachten polizeilicher Anweisungen", 5000, 0, 2, null));
 		bussgelderFromCatalog.add(new BussgeldGridItem("Umgehung polizeilicher Maßnahmen", 5000, 0, 3, null));
-		bussgelderFromCatalog.add(new BussgeldGridItem("Missachten von Sperrzonen/Sperrgebieten", 5000, 0, 3, null));
 		bussgelderFromCatalog.add(new BussgeldGridItem("Behinderung eines Beamten bei der Ausführung seiner Arbeit", 7000, 0, 5, null));
 		bussgelderFromCatalog.add(new BussgeldGridItem("Gefangenenbefreiung", 7500, 0, 3, null));
 		bussgelderFromCatalog.add(new BussgeldGridItem("Missbrauch des Notrufs", 5000, 0, 4, null));
@@ -143,13 +142,6 @@ public class EventController {
 		bussgelderFromCatalog.add(new BussgeldGridItem("Umweltverschmutzung", 2000, 0, 2, null));
 		bussgelderFromCatalog.add(new BussgeldGridItem("Belästigung", 2000, 0, 2, null));
 		bussgelderFromCatalog.add(new BussgeldGridItem("Amtsanmaßung", 10000, 0, 6, null));
-		bussgelderFromCatalog.add(new BussgeldGridItem("Missachten polizeilicher Anweisungen", 5000, 0, 2, null));
-		bussgelderFromCatalog.add(new BussgeldGridItem("Umgehung polizeilicher Maßnahmen", 5000, 0, 3, null));
-		bussgelderFromCatalog.add(new BussgeldGridItem("Missachten von Sperrzonen/Sperrgebieten", 5000, 0, 3, null));
-		bussgelderFromCatalog.add(new BussgeldGridItem("Behinderung eines Beamten bei der Ausführung seiner Arbeit", 7000, 0, 5, null));
-		bussgelderFromCatalog.add(new BussgeldGridItem("Gefangenenbefreiung", 7500, 0, 3, null));
-		bussgelderFromCatalog.add(new BussgeldGridItem("Missbrauch des Notrufs", 5000, 0, 4, null));
-		bussgelderFromCatalog.add(new BussgeldGridItem("Angabe falscher Information unter geleistetem Eid", 5500, 0, 4, null));
 		
 		/*
 		 * Waffengesetze
