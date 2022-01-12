@@ -24,7 +24,7 @@
 <t:colline id="g_14" height="100%" width="5" />
 <t:coldistance id="g_13" width="20" />
 <t:pane id="g_10" height="100%" width="90%" >
-<t:rowpagebeaninclude id="g_12" pagebeanbinding="#{d.HomeBean.workPlaceProgram}" shownullcontent="true" />
+<t:rowpagebeaninclude id="g_12" pagebeanbinding="#{d.HomeBean.workPlaceProgram}" shownullcontent="false" />
 </t:pane>
 </t:row>
 </t:rowbodypane>

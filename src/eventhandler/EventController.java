@@ -194,9 +194,11 @@ public class EventController {
 				
 				@Override
 				public void removeButtonPressed() {
+					/*
 					if(getBussgeldRechnerBean().getBussgeldKatalogGrid().getItems().stream().filter(c -> c.getDescription().equals(gridItem.getDescription())).findFirst().isPresent()) {
 						getBussgeldRechnerBean().getBussgeldKatalogGrid().getItems().stream().filter(c -> c.getDescription().equals(gridItem.getDescription())).findFirst().get().setActionEnabled(true);
 					}
+					*/
 					getBussgeldRechnerBean().getBussgeldAssignedGrid().getItems().remove(gridItem);
 					
 					getBussgeldRechnerBean().setBussgeldCalculated(0);
@@ -206,9 +208,11 @@ public class EventController {
 				
 				@Override
 				public void addButtonPressed() {
+					/*
 					if(getBussgeldRechnerBean().getBussgeldKatalogGrid().getItems().stream().filter(c -> c.getDescription().equals(gridItem.getDescription())).findFirst().isPresent()) {
 						getBussgeldRechnerBean().getBussgeldKatalogGrid().getItems().stream().filter(c -> c.getDescription().equals(gridItem.getDescription())).findFirst().get().setActionEnabled(false);
 					}
+					*/
 					getBussgeldRechnerBean().getBussgeldAssignedGrid().getItems().add(gridItem);
 					
 					getBussgeldRechnerBean().setBussgeldCalculated(0);
