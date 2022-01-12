@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<workplaceTileInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.CaptainCasa.com/xsd/WorkplaceTileInfo.xsd">
+	<text>Demo Workplace</text>
+    <split>
+        <orientation>horizontal</orientation>
+        <dividerLocation>250</dividerLocation>
+        <subContainer1>
+            <id>FUNCTIONS</id>
+        </subContainer1>
+        <subContainer2/>
+    </split>
+    <startViews>
+        <jspPage>/page1.jsp</jspPage>
+        <id>page1</id>
+        <text>Page 1</text>
+        <decorated>true</decorated>
+        <closeSupported>true</closeSupported>
+        <popupSupported>true</popupSupported>
+        <openMultipleInstances>false</openMultipleInstances>
+        <startSubWorkpageContainerId>FUNCTIONS</startSubWorkpageContainerId>
+    </startViews>
+</workplaceTileInfo>

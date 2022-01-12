@@ -1,0 +1,24 @@
+The names of the jar files in WEB-INF/lib do not contain a version information
+in order to simplify the delivey of updated jar files. The list below contains
+the exact version information on each file.
+
+iText-2.1.7
+jsf-api-2.2.18
+jsf-impl-2.2.18
+jstl-api-1.2
+log4j-1.2.17
+xercesImpl-2.11.0
+gson 2.8.5
+esapi-2.1.0.1
+
+jaxb-api 2.3.1 (module-list.class removed due to Java8 compatibility)
+jaxb-runtime 2.3.1 (module-list.class removed due to Java8 compatibility)
+javax.activation-api 1.2.0
+istack-commons-runtime 3.0.7 (module-list.class removed due to Java8 compatibility)
+
+Compile time:
+VeracodeAnnotations-1.2.1
+
+Some libraries may be listed twice - one version having a size of 1kByte. In this
+case we update the corresponding jar file and deliver the previous version as
+dummy file so that it overwrites the file in case of copying and posting.

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+	The default configuration of the servlet context is done in class
+	CCInitialiServlets. 
+ -->
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xmlns="http://java.sun.com/xml/ns/javaee" 
+         xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" 
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" 
+         id="WebApp_ID" 
+         version="3.0">
+         
+  <display-name>CaptainCasa based application</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+
+  <!-- ********** CONTEXT PARAMETERS *************************************** -->
+
+  <!-- JBoss Deployment - use the reference implementation that comes
+       with CapatainCasa by default -->
+  <context-param>
+    <param-name>org.jboss.jbossfaces.WAR_BUNDLES_JSF_IMPL</param-name>
+    <param-value>true</param-value>
+  </context-param>  
+
+  <!-- ********** LISTENERS ************************************************ -->  
+  <listener>
+    <listener-class>org.eclnt.jsfserver.util.CCServletContextListener</listener-class>
+  </listener>
+    
+  <!-- ********** SESSION MANAGEMENT *************************************** -->
+  <session-config>
+      <session-timeout>60</session-timeout>
+      <tracking-mode>URL</tracking-mode>
+  </session-config>
+  
+  <!--
+  Alternative session management via cookies. Also has to be configured in
+  eclntjsfserver/config/system.xml!
+  
+  <session-config>
+      <session-timeout>60</session-timeout>
+      <tracking-mode>COOKIE</tracking-mode>
+      <cookie-config>
+          <http-only>true</http-only>
+          <secure>true</secure>
+      </cookie-config>
+  </session-config>
+  -->
+  
+</web-app>

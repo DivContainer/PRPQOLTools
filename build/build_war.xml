@@ -1,0 +1,66 @@
+<!--
+ANT script for building a .war file for this project.
+-->
+
+<project name="BUILDWAR" default="BUILDWAR">
+
+    <description>Build war file for project: PRPQOLTools</description>
+
+    <property name="build.targetdirectory" value="../ztemp"/>
+    <property name="build.warfilename" value="PRPQOLTools"/>
+    
+    <target name="BUILDWAR" description="BUILDWAR">
+
+        <delete dir="${build.targetdirectory}" failonerror="false"/>
+        <mkdir dir="${build.targetdirectory}"/>
+        <mkdir dir="${build.targetdirectory}/webcontent"/>
+
+        <echo>Copying web application into project-ztemp directory</echo>
+        <copy todir="${build.targetdirectory}/webcontent" overwrite="true">
+            <fileset dir="../webcontent">
+                <include name="**/**"/>
+            	<!-- 
+            	The file triggering the hot deployment is explicitly removed
+            	so that hot deployment is switched off by defult.
+            	-->
+                <exclude name="eclntjsfserver/config/hotdeploy.xml"/>
+                <!-- 
+                Here you may add some exclude statements for specific files that
+                should not be copied into the delivery. Example: subversion files
+                <exclude name="**/.svn"/>   
+                <exclude name="**/.git"/>   
+                 -->
+            </fileset>
+            <fileset dir="../webcontentbuild">
+                <include name="**/**"/>
+            </fileset>
+            <fileset dir="../webcontentcc">
+                <include name="**/**"/>
+            </fileset>
+        </copy>
+        
+        <echo>Packaging war file</echo>
+        <jar destfile="${build.targetdirectory}/${build.warfilename}.war">
+            <fileset dir="${build.targetdirectory}/webcontent">
+                <include name="**/**"/>
+            </fileset>
+        </jar>
+        
+        <echo>Tidying up</echo>
+        <delete dir="${build.targetdirectory}/webcontent" failonerror="false"/>
+        
+        <echo> </echo>
+        <echo> </echo>
+        <echo>------------------------------------------------------------------</echo>
+        <echo>-- WAR FILE WAS CREATED!</echo>
+        <echo>------------------------------------------------------------------</echo>
+        <echo>-- Directory: ${build.targetdirectory}</echo>
+        <echo>-- Name     : ${build.warfilename}.war</echo>
+        <echo>------------------------------------------------------------------</echo>
+        <echo> </echo>
+        <echo> </echo>
+        
+    </target>    
+    
+</project>
+
