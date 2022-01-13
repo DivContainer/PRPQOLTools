@@ -13,7 +13,7 @@
 <f:subview id="homeg_sv">
 <t:beanprocessing id="g_1" />
 <t:rowtitlebar id="g_2" text="PRP QOL Tools" />
-<t:rowbodypane id="g_4" >
+<t:rowbodypane id="g_4" background="#595959" >
 <t:row id="g_6" >
 <t:pane id="g_8" height="100%" width="10%" >
 <t:row id="g_9" >
