@@ -30,6 +30,7 @@ public class BussgeldRechnerBean extends PageBean implements Serializable {
 	private double bussgeldCalculated;
 	private int haftCalculated;
 	private int licensePointsCalculated;
+	private String presetSelection;
 	
 	private EventControllerInterface eventControllerInterface;
 	
@@ -123,6 +124,14 @@ public class BussgeldRechnerBean extends PageBean implements Serializable {
 
 	public void setLicensePointsCalculated(int licensePointsCalculated) {
 		this.licensePointsCalculated = licensePointsCalculated;
+	}
+	
+	public String getPresetSelection() {
+		return presetSelection;
+	}
+
+	public void setPresetSelection(String presetSelection) {
+		this.presetSelection = presetSelection;
 	}
 
 	public EventControllerInterface getEventControllerInterface() {

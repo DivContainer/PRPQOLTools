@@ -3,8 +3,10 @@ package eventhandler;
 import java.util.ArrayList;
 
 import org.eclnt.jsfserver.elements.impl.FIXGRIDListBinding;
+import org.eclnt.jsfserver.elements.util.ValidValuesBinding;
 
 import infoobjects.BussgeldGridItem;
+import infoobjects.BussgeldPresetManager;
 import interfaces.GridButtonInterface;
 import managedbeans.BussgeldRechnerBean;
 
@@ -17,18 +19,31 @@ public class EventController {
 	}
 	
 	public void initBussgeldRechnerEventController() {
+		BussgeldPresetManager presetManager = new BussgeldPresetManager();
+
 		EventControllerInterface ecInterface = new EventControllerInterface() {
 			
 			@Override
 			public void callEvent(EventID eventId) {
+
 				switch(eventId) {
 				case INIT:
 					getBussgeldRechnerBean().setBussgeldAssignedGrid(new FIXGRIDListBinding<BussgeldGridItem>());
+					getBussgeldRechnerBean().setPresetsVVB(new ValidValuesBinding());
 					fillBussgeldkatalog(null);
+					
+					getBussgeldRechnerBean().setPresetSelection(null);
+					
+					presetManager.initPreset(getBussgeldRechnerBean().getPresetsVVB());
 					break;
 				case SEARCH:
 					getBussgeldRechnerBean().getBussgeldKatalogGrid().getItems().clear();
 					fillBussgeldkatalog(getBussgeldRechnerBean().getSearchInput());
+					break;
+				case APPLY_PRESET:
+					if(getBussgeldRechnerBean().getPresetsVVB() != null && getBussgeldRechnerBean().getPresetSelection() != null) {
+						presetManager.applyPreset(getBussgeldRechnerBean().getPresetSelection(), bussgeldRechnerBean, getBussgeldRechnerBean().getBussgeldAssignedGrid());
+					}
 					break;
 				case CALCULATE:
 					double bussgeldSum = 0.0;
@@ -127,7 +142,6 @@ public class EventController {
 		bussgelderFromCatalog.add(new BussgeldGridItem("Erschleichen von Dienstleistungen (+ Schadensersatz)", 1500, 0, 2, null));
 		bussgelderFromCatalog.add(new BussgeldGridItem("Besitz/Handel/Herstellung von gef‰lschter Ware", 6000, 0, 6, null));
 		bussgelderFromCatalog.add(new BussgeldGridItem("Besitz gef‰lschten Geldes", 12000, 0, 4, null));
-		bussgelderFromCatalog.add(new BussgeldGridItem("Umweltverschmutzung", 2000, 0, 2, null));
 		bussgelderFromCatalog.add(new BussgeldGridItem("Bel‰stigung", 2000, 0, 2, null));
 		bussgelderFromCatalog.add(new BussgeldGridItem("Amtsanmaﬂung", 10000, 0, 6, null));
 		bussgelderFromCatalog.add(new BussgeldGridItem("Missachten polizeilicher Anweisungen", 5000, 0, 2, null));
@@ -136,9 +150,6 @@ public class EventController {
 		bussgelderFromCatalog.add(new BussgeldGridItem("Gefangenenbefreiung", 7500, 0, 3, null));
 		bussgelderFromCatalog.add(new BussgeldGridItem("Missbrauch des Notrufs", 5000, 0, 4, null));
 		bussgelderFromCatalog.add(new BussgeldGridItem("Angabe falscher Information unter geleistetem Eid", 5500, 0, 4, null));
-		bussgelderFromCatalog.add(new BussgeldGridItem("Erschleichen von Dienstleistungen", 1500, 0, 2, null));
-		bussgelderFromCatalog.add(new BussgeldGridItem("Besitz/Handel/Herstellung von gef‰lschter Ware", 6000, 0, 6, null));
-		bussgelderFromCatalog.add(new BussgeldGridItem("Besitz gef‰lschten Geldes", 12000, 0, 4, null));
 		bussgelderFromCatalog.add(new BussgeldGridItem("Umweltverschmutzung", 2000, 0, 2, null));
 		bussgelderFromCatalog.add(new BussgeldGridItem("Bel‰stigung", 2000, 0, 2, null));
 		bussgelderFromCatalog.add(new BussgeldGridItem("Amtsanmaﬂung", 10000, 0, 6, null));

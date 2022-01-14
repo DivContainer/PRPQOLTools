@@ -18,7 +18,7 @@
 <t:pane id="g_7" height="100%" width="60%" >
 <t:row id="g_3" >
 <t:label id="g_9" foreground="#bfbfbf" text="Suche:" width="50" />
-<t:field id="g_5" actionListener="#{d.BussgeldRechnerBean.sucheStartenButtonPressed}" background="#bfbfbf" flush="true" flushtimer="500" text="#{d.BussgeldRechnerBean.searchInput}" width="300" />
+<t:field id="g_5" actionListener="#{d.BussgeldRechnerBean.sucheStartenButtonPressed}" background="#bfbfbf" flush="true" flushtimer="500" text="#{d.BussgeldRechnerBean.searchInput}" width="100%" />
 </t:row>
 <t:rowdistance id="g_14" height="30" />
 <t:row id="g_17" >
@@ -42,7 +42,7 @@
 <t:pane id="g_27" height="100%" width="40%" >
 <t:row id="g_26" >
 <t:label id="g_36" foreground="#bfbfbf" text="Presets" width="50" />
-<t:combobox id="g_37" background="#bfbfbf" foreground="#bfbfbf" validvaluesbinding="#{d.BussgeldRechnerBean.presetsVVB}" width="150" />
+<t:combobox id="g_37" background="#bfbfbf" foreground="#000000" validvaluesbinding="#{d.BussgeldRechnerBean.presetsVVB}" value="#{d.BussgeldRechnerBean.presetSelection}" width="100%" />
 <t:coldistance id="g_58" width="10" />
 <t:button id="g_56" actionListener="#{d.BussgeldRechnerBean.presetUebernehmenButtonPressed}" background="#bfbfbf" text="Übernehmen" width="150" />
 </t:row>

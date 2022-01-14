@@ -24,7 +24,7 @@ public class HomeBean extends PageBean implements Serializable {
 	
 	public HomeBean() {
 		super();
-		
+		try {
 		this.eventController = new EventController();
 		this.bussgeldRechnerBean = new BussgeldRechnerBean();
 		
@@ -34,8 +34,12 @@ public class HomeBean extends PageBean implements Serializable {
 		bussgeldRechnerBean.init();
 		
 		checkButtonAvailability();
-	}
 	
+		}catch (Exception ex) { 
+			ex.printStackTrace();
+		}
+	}
+		
 	public void onStartBussgeldkatalogRechnerButtonPressed(ActionEvent event) {
 		this.workPlaceProgram = this.bussgeldRechnerBean;
 		
