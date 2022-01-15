@@ -54,6 +54,10 @@ public class BussgeldRechnerBean extends PageBean implements Serializable {
 		getEventControllerInterface().callEvent(EventID.CALCULATE);
 	}
 	
+	public void resetBussgeldAssignedGrid(ActionEvent event) {
+		getEventControllerInterface().callEvent(EventID.RESET);
+	}
+	
 	public String getSearchInput() {
 		return searchInput;
 	}

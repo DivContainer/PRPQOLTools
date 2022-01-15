@@ -58,6 +58,12 @@ public class EventController {
 					getBussgeldRechnerBean().setHaftCalculated(jailTimeSum);
 					getBussgeldRechnerBean().setLicensePointsCalculated(licensePoints);
 					break;
+				case RESET:
+					getBussgeldRechnerBean().getBussgeldAssignedGrid().getItems().clear();
+					getBussgeldRechnerBean().setBussgeldCalculated(0);
+					getBussgeldRechnerBean().setLicensePointsCalculated(0);
+					getBussgeldRechnerBean().setHaftCalculated(0);
+					break;
 				default:
 					break;
 				}

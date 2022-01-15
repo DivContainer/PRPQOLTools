@@ -65,7 +65,9 @@
 </t:row>
 <t:rowdistance id="g_64" height="30" />
 <t:row id="g_60" >
-<t:button id="g_40" actionListener="#{d.BussgeldRechnerBean.strafeBerechnenButtonPressed}" background="#bfbfbf" text="Strafe berechnen" width="100%" />
+<t:button id="g_81" actionListener="#{d.BussgeldRechnerBean.strafeBerechnenButtonPressed}" background="#bfbfbf" text="Strafe berechnen" width="75%" />
+<t:coldistance id="g_83" width="10" />
+<t:button id="g_40" actionListener="#{d.BussgeldRechnerBean.resetBussgeldAssignedGrid}" background="#ffc000" text="Zurücksetzen" width="25%" />
 </t:row>
 <t:rowdistance id="g_65" height="30" />
 <t:row id="g_29" >
